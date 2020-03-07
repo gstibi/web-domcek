@@ -1,0 +1,601 @@
+:root {
+	--blue: #007bff;
+	--indigo: #6610f2;
+	--purple: #6f42c1;
+	--pink: #e83e8c;
+	--red: #dc3545;
+	--orange: #fd7e14;
+	--yellow: #ffc107;
+	--green: #28a745;
+	--teal: #20c997;
+	--cyan: #17a2b8;
+	--white: #fff;
+	--gray: #6c757d;
+	--gray-dark: #343a40;
+    --primary: #ef5d24;
+    --primary2: rgba(255, 115, 0, 0.322);
+    --navbarfontcolor: #ffa256e0;
+	--secondary: #6c757d;
+	--success: #2ab27b;
+	--info: #8eb4cb;
+	--warning: #cbb956;
+	--danger: #bf5329;
+	--light: #f8f9fa;
+    --dark: #343a40;
+    --shadow: #676b6e2c;
+	--breakpoint-xs: 0;
+	--breakpoint-sm: 576px;
+	--breakpoint-md: 768px;
+	--breakpoint-lg: 992px;
+	--breakpoint-xl: 1200px;
+	--font-family-sans-serif: sfprotext_regular, sans-serif;
+    --font-family-monospace: sfprotext_regular;
+    --zoom: 1.05;
+    --trans: 0.6s;
+}
+
+
+.content{
+    padding: 5vh 5vw;
+}
+
+
+@font-face {
+    font-family: sfprotext_light;
+    src:url("SFProText-Light.ttf");
+}
+
+@font-face {
+    font-family: sfprotext_medium;
+    src:url("SFProText-Medium.ttf");
+}
+
+@font-face {
+    font-family: sfprotext_regular;
+    src:url("SFProText-Regular.ttf");
+}
+
+@font-face {
+    font-family: sfprotext_semibold;
+    src:url("SFProText-Semibold.ttf");
+}
+
+@font-face {
+    font-family: sfprotext_bold;
+    src:url("SFProText-bold.ttf");
+}
+
+@font-face {
+    font-family: sfprotext_italic;
+    src:url("SFProText-MediumItalic.ttf");
+}
+
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700&display=swap');
+
+/*******************************************
+nadpisy
+*/
+
+body{
+    font-family: sfprotext_light;
+}
+
+.navbar{
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+
+
+.btn{
+    font-family: sfprotext_semibold;
+    font-size: 0.9rem;
+}
+
+h1{
+    color: var(--primary);
+    margin: 0;
+    font-family: sfprotext_semibold;
+}
+
+.h-white{
+    color: white;
+}
+
+.line{
+    width: 125px;
+    height: 50px;
+    border-bottom: 5px solid var(--primary);
+    max-height: 0.75em;
+    margin-bottom: 20px;
+    }
+
+p{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: normal;
+}
+
+/*******************************************
+obrazky
+*/
+.slider{
+    height: 100vh;
+    object-fit: cover;
+}
+
+.smaller-slider{
+    height: 40vh;
+}
+
+.bgImgCenter{
+    background-repeat: no-repeat;
+    background-position: center; 
+    position: relative;
+    height: 80vh;
+    transition: 0.7s;
+    padding-bottom: 5vh;
+}
+
+#dom{
+    background: linear-gradient(270deg, rgba(0, 0, 0, 0.637) 0%, rgba(0, 0, 0, 0.514) 100%), url('../img/prsten.jpg');
+    background-position-y: 30%;
+    background-size: cover;
+    box-shadow: 0vh 0vh 10vh var(--shadow);
+}
+
+#anka{
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.301) 0%, rgba(241, 241, 241, 0.253) 100%), url('../img/anka-bw.jpg');
+    background-size: cover;
+    background-position: 60%;
+    box-shadow: 0vh 0vh 10vh var(--shadow);
+}
+
+#popis-dom{
+    color: white;
+}
+
+/*******************************************
+popisy
+*/
+
+.description{
+    padding: 5%;
+    max-width: 800px;
+}
+
+#popis-dom{
+    margin-left: auto;
+    text-align: justify;
+}
+
+#popis-anka{
+    margin-right: auto;
+    text-align: justify;
+}
+
+.main-menu{
+    background-color: rgba(0, 0, 0, 0.63);
+    transition: all ease 1s;
+}
+
+.main-menu.index{
+    background-color: rgba(0, 0, 0, 0);
+    transition: all ease-in-out 1s;
+}
+
+.side-menu {
+    width: 100%;
+    z-index: 1;
+    top: 45vh;
+    left: 3vh;
+    overflow-x: hidden;
+    border-width: 0;
+    background-color: var(--light);
+    transition: 0.6s;
+    box-shadow: 0vh 0vh 1.5vh var(--shadow);
+}
+
+.sticky{
+    position: sticky;
+    top: 75px;
+}
+
+.side-menu a{
+    color: var(--dark);
+    display: block;
+    padding: 5%;
+    text-decoration: none;
+}
+
+.side-menu a:hover{
+    background-color: var(--dark);
+    color: white;
+}
+
+.side-menu-name{
+    color: white;
+    background-color: var(--primary);
+    padding: 5%;
+}
+
+.list-group-item{
+    padding: 0;
+}
+
+
+
+/*******************************************
+karty
+*/
+
+.card-columns{
+    margin: 2vh;
+}
+
+.card{
+    border-width: 0;
+    margin: 4vh 4vw;
+    background-color: var(--light);
+    box-shadow: 0vh 0vh 1.5vh var(--shadow);
+    height: fit-content;
+    height: 50vh;
+}
+
+.card img{
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-title{
+    color: var(--secondary);
+    font-weight: bold;
+}
+
+.card:hover img{
+    border-width: 0;
+    transform: scale(var(--zoom));
+    transition: var(--trans);
+    filter: grayscale(0.4);
+}
+
+img{
+    transition: var(--trans);
+}
+
+.stretched-link{
+    height: 50%;
+    overflow: hidden;
+}
+
+.col-centered{
+    margin: auto;
+}
+
+.page-footer{
+    margin-top: 10vh;
+    background-color: var(--dark);
+}
+
+.page-footer a {
+    text-decoration: none;
+    color: var(--light);
+    font-size: 0.7rem;
+}
+
+#sipka{
+    color: var(--primary);
+    font-size: 1rem;
+    padding-left: 1rem;
+    transition: 0.5s;
+    overflow: hidden;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    font-size: 4vh;
+}
+
+#sipka:hover{
+    transform: scale(1.05);
+}
+
+/*********************************
+tlacidla
+*/
+
+.btn-primary{
+    text-transform: uppercase;
+    transition: 0.5s;
+    border-radius: 10;
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn-primary:hover{
+    transition: 0.5s;
+    background-color: white;
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.btn-primary.focus,
+.btn-primary:focus {
+	-webkit-box-shadow: 0 0 0 .2rem var(--primary2);
+	box-shadow: 0 0 0 .2rem var(--primary2);
+}
+
+.btn-primary:not(:disabled):not(.disabled).active,
+.btn-primary:not(:disabled):not(.disabled):active,
+.show>.btn-primary.dropdown-toggle {
+	color: #fff;
+	background-color: var(--primary2);
+	border-color: var(--primary2)
+}
+
+.btn-primary:not(:disabled):not(.disabled).active:focus,
+.btn-primary:not(:disabled):not(.disabled):active:focus,
+.show>.btn-primary.dropdown-toggle:focus {
+	-webkit-box-shadow: 0 0 0 .2rem var(--primary2);
+	box-shadow: 0 0 0 .2rem var(--primary2);
+}
+
+/*************************
+navigacia
+*/
+
+.page-link{
+	display: block;
+	color: white;
+	background-color: var(--dark);
+	border: 1px solid #dee2e6
+}
+
+.page-link:hover {
+	color: var(--primary2);
+    text-decoration: none;
+    color: white;
+	background-color: var(--primary);
+	border-color: var(--primary2)
+}
+
+.page-link:focus {
+	z-index: 2;
+	outline: 0;
+	-webkit-box-shadow: 0 0 0 .2rem var(--primary2);
+	box-shadow: 0 0 0 .2rem var(--primary2)
+}
+
+/******************************
+bocny panel s aktualitamy
+*/
+
+.aktuality-menu{
+    border-width: 5px;
+    overflow: hidden;
+}
+
+.aktuality-menu .card{
+    margin: 0;
+    max-height: 30%;
+}
+
+.aktuality-menu .list-group-item{
+    border-width: 0;
+}
+
+.aktuality-menu .btn-dark{
+    width: 100%;
+    height: 10%;
+    border-radius: 0;
+}
+
+.aktuality-menu .stretched-link{
+    height: 15vh;
+}
+
+/*********************************
+sipka nahor (back to top)
+*/ 
+.back_to_top {
+    color: white;
+    height: auto;
+    position: fixed;
+    bottom: 5%;
+    right: 3%;
+    margin: 0;
+    z-index: 10000;
+    transition: all .3s ease 0s;
+    text-decoration: none;
+}
+
+.back_to_top.show {
+    visibility: visible;
+    opacity: 1;
+}
+.back_to_top.hide {
+    visibility: hidden;
+    opacity: 0;
+}
+
+#back_to_top:hover>span {
+    background-color: var(--primary);
+}
+
+#back_to_top>span {
+    width: 52px;
+    height: 52px;
+    line-height: 52px;
+    text-decoration: none;
+    border-radius: 52px;
+    transition: all .2s ease 0s;
+    border: 2px solid var(--primary2);
+    background: 0 0;
+}
+
+#back_to_top span{
+    text-align: center;
+    background-color: var(--primary2);
+}
+
+.fa-stack {
+    color: white;
+    position: relative;
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    line-height: 2em;
+    vertical-align: middle;
+}
+
+/*********************************
+navbar
+*/
+
+.navbar-brand{
+    padding-right: 5rem;
+}
+
+img.logo{
+    transition: 1s ease 0s;
+    height: 2.7rem;
+}
+
+img.logo:hover{
+    transform: scale(1.02);
+}
+
+.nav-link{
+    display: block;
+}
+
+.navbar{
+    height: 6rem;
+}
+
+.solid {
+    background-color: var(--primary);
+    transition: ease 1s;
+    margin-top: -5rem;
+    box-shadow: 0 0 6px grey;
+}
+
+nav .navbar-nav li a:hover{
+    transition: ease 0.5s;
+    color: var(--navbarfontcolor) !important;
+}
+
+nav .navbar-nav.fontcolor li a:hover{
+    transition: ease 0.8s;
+    color: var(--dark) !important;
+}
+
+.navbar-collapse {
+	-ms-flex-preferred-size: 100%;
+	flex-basis: 100%;
+	-webkit-box-flex: 1;
+	-ms-flex-positive: 1;
+	flex-grow: 1;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+    align-items: center;
+}
+
+.navbar,
+.navbar>.container,
+.navbar>.container-fluid {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-box-align: center;
+	-ms-flex-align: space-ao;
+	align-items: center;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: center;
+}
+
+.dropdown-item{
+    font-size: 0.9rem;
+    font-family: sfprotext_regular;
+}
+
+@media screen and (max-width: 1100px) {
+    .side-menu {position: static}
+
+    .description{
+        padding:8%;
+    }
+
+    .content{
+        padding:8%;
+    }
+
+    #dom{
+        background:linear-gradient(0deg, rgba(0, 0, 0, 0.747), rgba(0, 0, 0, 0.589)), url('../img/prsten.jpg');
+        background-position-y: 30%;
+        background-position-x: 30%;
+    }
+
+    #anka{
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0.301) 0%, rgba(241, 241, 241, 0.884) 100%), url('../img/anka-bw.jpg');
+        background-size: cover;
+        background-position: 60%;
+    }
+}
+
+@media screen and (max-width: 992px){
+    .navbar>.container{
+        justify-content: space-between;
+    }
+
+    .navbar-brand{
+        padding-right: 0rem;
+    }
+
+    nav .navbar-nav.fontcolor li a:hover{
+        transition: ease 0.5s;
+        color: var(--navbarfontcolor) !important;
+        transform: scale(1.01);
+    }
+
+    .solid {
+        background-color: var(--primary);
+        transition: ease 1s;
+        margin-top: 0rem;
+    }
+
+    .bgImgCenter{
+        height: fit-content;
+    }
+
+    .navbar{
+        height: auto;
+    }
+    
+}
+
+@media screen and (max-width: 500px){
+    .description{
+        font-size: 0.9rem;
+    }
+
+    img.logo{
+        padding-right: 0rem;
+    }
+}
+
+.dropdown:hover .dropdown-menu{
+    display: block;
+}
+
+.dropdown:not(:hover) .dropdown-menu{
+    display: none;
+}
+
+
+
+
+
