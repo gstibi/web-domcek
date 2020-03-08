@@ -32,6 +32,7 @@
     --font-family-monospace: sfprotext_regular;
     --zoom: 1.05;
     --trans: 0.6s;
+    --btn-box-shadow: 0px 4px 72px 5px rgba(0, 0, 0, 0.295);
 }
 
 
@@ -305,11 +306,19 @@ tlacidla
 */
 
 .btn-primary{
-    text-transform: uppercase;
     transition: 0.5s;
-    border-radius: 10;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.65rem;
+    font-weight: bold;
+    letter-spacing: 0.025rem;
+    text-transform: uppercase;
+    color: var(--white);
     background-color: var(--primary);
-    border-color: var(--primary);
+    border: none;
+    border-radius: 60px;
+    box-shadow: var(--btn-box-shadow);
 }
 
 .btn-primary:hover{
