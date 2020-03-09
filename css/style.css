@@ -40,6 +40,10 @@
     padding: 5vh 5vw;
 }
 
+@font-face {
+    font-family: FontAwesome;
+    src:url("Font\ Awesome\ 5\ Free-Solid-900.otf");
+}
 
 @font-face {
     font-family: sfprotext_light;
@@ -78,7 +82,9 @@ nadpisy
 */
 
 body{
+    line-height: 23px;
     font-family: sfprotext_light;
+    font-size: 16px;
 }
 
 .navbar{
@@ -98,6 +104,8 @@ h1{
     color: var(--primary);
     margin: 0;
     font-family: sfprotext_semibold;
+    font-size: 30px;
+    text-transform: uppercase;
 }
 
 .h-white{
@@ -376,32 +384,262 @@ navigacia
 }
 
 /******************************
-bocny panel s aktualitamy
-*/
+/* Aktuality */
 
-.aktuality-menu{
-    border-width: 5px;
+.aktuality{
+    text-align: left;
+    text-transform: uppercase;
+    padding-top: 6rem;
+}
+
+.aktuality h1{
+    color: black;
+}
+
+.blog-card {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    margin: 1rem auto;
+    margin-left: 0;
+    box-shadow: 0 3px 7px -1px rgba(0, 0, 0, 0.1);
+    margin-bottom: 3%;
+    background: #fff;
+    line-height: 1.4;
     overflow: hidden;
-}
+    z-index: 0;
+  }
+  .blog-card a {
+    color: inherit;
+  }
+  .blog-card a:hover {
+    color: var(--primary)
+  }
+  .blog-card .meta {
+    position: relative;
+    z-index: 0;
+    height: 200px;
+  }
+  .blog-card .photo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-size: cover;
+    background-position: center;
 
-.aktuality-menu .card{
-    margin: 0;
-    max-height: 30%;
-}
-
-.aktuality-menu .list-group-item{
-    border-width: 0;
-}
-
-.aktuality-menu .btn-dark{
+  }
+  .blog-card .details,
+  .blog-card .details ul {
+    margin: auto;
+    padding: 0;
+    list-style: none;
+  }
+  .blog-card .details {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -100%;
+    margin: auto;
+    -webkit-transition: left .2s;
+    transition: left .2s;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 10px;
     width: 100%;
-    height: 10%;
-    border-radius: 0;
-}
+    font-size: .9rem;
+  }
+  .blog-card .details ul li {
+    display: inline-block;
+  }
+  .blog-card .details .author:before {
+    font-family: FontAwesome;
+    margin-right: 10px;
+    content: "\f007";
+  }
+  .blog-card .details .date:before {
+    font-family: FontAwesome;
+    margin-right: 10px;
+    content: "\f133";
+  }
+  .blog-card .details .tags ul:before {
+    font-family: FontAwesome;
+    content: "\f02b";
+    margin-right: 10px;
+  }
+  .blog-card .details .tags li {
+    margin-right: 2px;
+  }
+  .blog-card .details .tags li:first-child {
+    margin-left: -4px;
+  }
+  .blog-card .description {
+    padding: 1rem;
+    background: #fff;
+    position: relative;
+    z-index: 1;
+  }
+  .blog-card .description h1 {
+      font-family: sfprotext_medium;
+  }
+  .blog-card .description h2 {
+    font-family: sfprotext_regular;
+  }
+  .blog-card .description h1 {
+    line-height: 1;
+    margin: 0;
+    font-size: 22px;
+    font-family: sfprotext_medium;
+  }
+  .blog-card .description h2 {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    color: #a2a2a2;
+    margin-top: 5px;
+  }
+  .blog-card .description .read-more {
+    text-align: right;
+  }
+  .blog-card .description .read-more a {
+    color: var(--primary);
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+  }
+  .blog-card .description .read-more a:after {
+    content: "\f054";
+    font-family: FontAwesome;
+    font-size: 16px;
+    margin-left: -10px;
+    opacity: 0;
+    vertical-align: middle;
+    -webkit-transition: margin .3s, opacity .3s;
+    transition: margin .3s, opacity .3s;
+  }
+  .blog-card .description .read-more a:hover:after {
+    margin-left: 5px;
+    opacity: 1;
+  }
+  .blog-card p {
+    position: relative;
+    margin: 1rem 0 0;
+  }
+  .blog-card p:first-of-type {
+    margin-top: 1.25rem;
+  }
+  .blog-card p:first-of-type:before {
+    content: "";
+    position: absolute;
+    height: 5px;
+    background: var(--primary);
+    width: 35px;
+    top: -0.75rem;
+    border-radius: 3px;
+  }
 
-.aktuality-menu .stretched-link{
-    height: 15vh;
-}
+  .blog-card:hover .details {
+    left: 0%;
+  }
+  @media (min-width: 640px) {
+    .blog-card {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+              flex-direction: row;
+    }
+    .blog-card .meta {
+      flex-basis: 40%;
+      height: auto;
+    }
+    .blog-card .description {
+      flex-basis: 60%;
+    }
+    .blog-card .description:before {
+      -webkit-transform: skewX(-3deg);
+              transform: skewX(-3deg);
+      content: "";
+      background: #fff;
+      width: 30px;
+      position: absolute;
+      left: -10px;
+      top: 0;
+      bottom: 0;
+      z-index: -1;
+    }
+    .blog-card.alt {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: reverse;
+              flex-direction: row-reverse;
+    }
+    .blog-card.alt .description:before {
+      left: inherit;
+      right: -10px;
+      -webkit-transform: skew(3deg);
+              transform: skew(3deg);
+    }
+    .blog-card.alt .details {
+      padding-left: 25px;
+    }
+  }
+
+/**********************************
+ Page navigation */
+.pagination {
+    list-style: none;
+    display: inline-block;
+    padding: 0;
+    margin-top: 10px;
+    box-shadow: 0px 4px 72px 5px rgba(0, 0, 0, 0.11);
+  }
+  .pagination li {
+    display: inline;
+    text-align: center;
+  }
+  .pagination a {
+    float: left;
+    display: block;
+    font-size: 14px;
+    text-decoration: none;
+    padding: 5px 12px;
+    color: #fff;
+    margin-left: -1px;
+    border: 1px solid transparent;
+    line-height: 1.5;
+  }
+  .pagination a.active {
+    cursor: default;
+  }
+  .pagination a:active {
+    outline: none;
+  }
+
+
+.modal-2 li:first-child a {
+    -moz-border-radius: 50px 0 0 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px 0 0 50px;
+  }
+  .modal-2 li:last-child a {
+    -moz-border-radius: 0 50px 50px 0;
+    -webkit-border-radius: 0;
+    border-radius: 0 50px 50px 0;
+  }
+  .modal-2 a {
+    border-color: #ddd;
+    color: #999;
+    background: #fff;
+  }
+  .modal-2 a:hover {
+    color: var(--primary);
+    background-color: #eee;
+  }
+  .modal-2 a.active, .modal-2 a:active {
+    border-color: var(--primary);
+    background: var(--primary);
+    color: #fff;
+  }
 
 /*********************************
 sipka nahor (back to top)
@@ -531,6 +769,8 @@ nav .navbar-nav.fontcolor li a:hover{
     font-family: sfprotext_regular;
 }
 
+
+
 @media screen and (max-width: 1100px) {
     .side-menu {position: static}
 
@@ -603,8 +843,3 @@ nav .navbar-nav.fontcolor li a:hover{
 .dropdown:not(:hover) .dropdown-menu{
     display: none;
 }
-
-
-
-
-
