@@ -1,0 +1,22 @@
+:root{
+    --primary: rgb(239, 93, 36);
+    --secondary: rgb(248,245,241);
+    --shadow: 0 3 25 rgb(0,0,0,20%);
+
+    --breakpoint-xs: 0;
+	--breakpoint-sm: 576px;
+	--breakpoint-md: 768px;
+	--breakpoint-lg: 992px;
+	--breakpoint-xl: 1200px;
+}
+
+@font-face{
+    font-family: sans-serif;
+    src: url("/fonts/Roboto-Light.ttf")
+}
+
+@font-face{
+    font-family: sans-serif;
+    src: url("/fonts/OpenSans-Regular.ttf")
+}
+

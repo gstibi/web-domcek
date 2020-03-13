@@ -1,0 +1,7 @@
+- Prvky čo sú na PC, nech sú aj na mobile (ak niečo nechceš na mobile, skry vrstvu)
+- robiť pre mobil iPhone 6/7/8
+- ! zoskupovať objekty, mať v tom poriadok, pomenovať veci
+- navbar (na mobile sa môže aj prekryť obrazovka ak klikneš na hamburger menu)
+- používať layout grid
+
+- vytvoriť akutálnu púť ako shop.godzone.sk ; konferencia.godzone.sk - "úplne iná stránka", navbar - invertované farby (asi), trošku upraviť dizajn, program, info, prihlasovanie v navbare, logo nás hodi opäť na domcek.org, 

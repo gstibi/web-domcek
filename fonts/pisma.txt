@@ -1,0 +1,14 @@
+KARTY:
+Open Sans Bold - 40px
+Roboto Light Italic - 16px
+
+TEXT:
+Open Sans Regular - 36px (h1)
+Open Sans Semibold - 22px (h2); možno to niekde dáme ako h1, 36px - pozri Index (o Domčeku, Bl.Anka nadpisy)
+Roboto Regular - 16px
+
+TLAČIDLÁ
+Rubik Medium - 10px
+
+NAVBAR
+Open Sans Regular
